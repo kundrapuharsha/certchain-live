@@ -1,0 +1,23 @@
+.dash-tabs {
+  display: flex; gap: 4px;
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: 12px; padding: 4px; width: fit-content;
+}
+.dash-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent; border: none;
+  color: var(--muted2); font-family: var(--sans);
+  font-size: 13px; font-weight: 600;
+  padding: 9px 18px; border-radius: 9px; cursor: pointer;
+  transition: all 0.18s;
+}
+.dash-tab:hover { color: var(--text); }
+.dash-tab.active { background: var(--accent); color: #fff; }
+
+.dash-results-header { margin-bottom: 16px; }
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}

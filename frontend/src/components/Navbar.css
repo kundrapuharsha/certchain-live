@@ -1,0 +1,72 @@
+.navbar {
+  position:sticky; top:0; z-index:100;
+  background:rgba(8,9,14,0.88); backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2); height:64px;
+}
+.navbar-inner {
+  display:flex; align-items:center; gap:20px;
+  max-width:1200px; margin:0 auto; padding:0 24px; height:100%;
+}
+.nav-logo {
+  display:flex; align-items:center; gap:7px;
+  font-weight:800; font-size:16px;
+  color:var(--accent); text-decoration:none; white-space:nowrap;
+}
+.nav-links { display:flex; align-items:center; gap:2px; flex:1; }
+.nav-link {
+  display:inline-flex; align-items:center; gap:5px;
+  padding:7px 11px; border-radius:8px;
+  font-size:13px; font-weight:600;
+  color:var(--muted2); text-decoration:none; transition:all 0.18s;
+}
+.nav-link:hover { color:var(--text); background:rgba(255,255,255,0.05); }
+.nav-link.active { color:var(--accent); background:rgba(79,142,247,0.1); }
+
+.nav-wallet { display:flex; align-items:center; gap:8px; margin-left:auto; }
+.wallet-info { display:flex; align-items:center; gap:7px; }
+
+.net-badge {
+  font-size:11px; font-family:var(--mono);
+  background:rgba(34,211,160,0.1); color:var(--green);
+  border:1px solid rgba(34,211,160,0.25);
+  padding:3px 8px; border-radius:20px;
+}
+.addr-badge {
+  font-family:var(--mono); font-size:12px;
+  background:var(--surface); border:1px solid var(--border2);
+  padding:4px 10px; border-radius:8px; color:var(--muted2);
+}
+.role-badge {
+  font-size:10px; font-weight:700; letter-spacing:1px;
+  text-transform:uppercase; padding:3px 8px; border-radius:20px;
+}
+.role-badge.owner { background:rgba(79,142,247,0.15); color:var(--accent); border:1px solid rgba(79,142,247,0.3); }
+.role-badge.inst  { background:rgba(147,51,234,0.15); color:#c084fc; border:1px solid rgba(147,51,234,0.3); }
+
+.btn-icon {
+  background:transparent; border:1px solid var(--border2);
+  border-radius:8px; color:var(--muted2);
+  padding:7px; cursor:pointer; display:flex;
+  align-items:center; transition:all 0.18s; text-decoration:none;
+}
+.btn-icon:hover { border-color:var(--accent); color:var(--accent); }
+
+.btn-connect {
+  display:inline-flex; align-items:center; gap:7px;
+  background:var(--accent); color:#fff; border:none;
+  border-radius:10px; padding:9px 18px;
+  font-size:13px; font-weight:700; cursor:pointer;
+  font-family:var(--sans); transition:all 0.18s;
+}
+.btn-connect:hover:not(:disabled) { background:var(--accent2); transform:translateY(-1px); }
+.btn-connect:disabled { opacity:0.5; cursor:not-allowed; }
+
+.spinner.sm {
+  width:13px; height:13px;
+  border:2px solid rgba(255,255,255,0.3);
+  border-top-color:#fff;
+}
+@media (max-width:700px) {
+  .nav-links { display:none; }
+  .wallet-info .net-badge { display:none; }
+}

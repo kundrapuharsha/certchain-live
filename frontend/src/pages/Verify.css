@@ -1,0 +1,24 @@
+.verify-step-title {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--accent);
+  font-family: var(--mono); margin-bottom: 16px;
+}
+.verify-step-num {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-family: var(--mono);
+}
+.verify-banner {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 22px; border-radius: var(--radius);
+  font-size: 14px; border: 1px solid;
+}
+.verify-banner.valid   { background: rgba(34,211,160,0.08); border-color: rgba(34,211,160,0.3); color: var(--green); }
+.verify-banner.invalid { background: rgba(244,63,94,0.08);  border-color: rgba(244,63,94,0.3);  color: var(--red); }
+.verify-banner.warn    { background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.3); color: var(--yellow); }
+.verify-banner svg        { flex-shrink: 0; }
+.verify-banner strong     { font-size: 16px; font-weight: 800; display: block; margin-bottom: 3px; }
+.verify-banner div > div  { font-size: 13px; opacity: 0.85; }

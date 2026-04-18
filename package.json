@@ -1,0 +1,29 @@
+{
+  "name": "certchain-live",
+  "version": "2.0.0",
+  "description": "Live blockchain student certificate registry — Sepolia testnet",
+  "private": true,
+  "scripts": {
+    "compile":         "hardhat compile",
+    "test":            "hardhat test",
+    "test:coverage":   "hardhat coverage",
+    "node":            "hardhat node",
+    "deploy:local":    "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia":  "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:polygon":  "hardhat run scripts/deploy.js --network polygon",
+    "verify:sepolia":  "hardhat verify --network sepolia",
+    "seed:local":      "hardhat run scripts/seed.js --network localhost",
+    "frontend":        "cd frontend && npm start",
+    "frontend:build":  "cd frontend && npm run build",
+    "setup":           "npm install && cd frontend && npm install",
+    "api:dev":         "cd api && npm run dev"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.0",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "ethers": "^6.11.0"
+  }
+}

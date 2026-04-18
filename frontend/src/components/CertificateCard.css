@@ -1,0 +1,50 @@
+.cert-card { display: flex; flex-direction: column; gap: 14px; }
+
+.cert-card-header {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cert-grade {
+  display: inline-block; font-size: 12px;
+  color: var(--muted2); margin-left: 10px;
+}
+.cert-grade strong { color: var(--yellow); }
+
+.cert-link-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; font-weight: 600;
+  color: var(--accent); text-decoration: none;
+  background: rgba(79,142,247,0.08);
+  border: 1px solid rgba(79,142,247,0.25);
+  padding: 5px 10px; border-radius: 7px;
+  transition: all 0.18s;
+}
+.cert-link-btn:hover { background: rgba(79,142,247,0.15); }
+
+.cert-main { display: flex; flex-direction: column; gap: 8px; }
+
+.cert-name {
+  display: flex; align-items: center; gap: 10px;
+}
+.cert-student { font-size: 18px; font-weight: 800; }
+.cert-sid     { font-size: 12px; color: var(--muted2); font-family: var(--mono); }
+
+.cert-course  { font-size: 15px; }
+.cert-code    { color: var(--muted2); font-family: var(--mono); font-size: 13px; }
+
+.cert-meta {
+  display: flex; flex-direction: column; gap: 5px;
+  padding-top: 10px; border-top: 1px solid var(--border);
+}
+.cert-inst {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--muted2);
+}
+.cert-dates {
+  font-size: 12px; color: var(--muted);
+  font-family: var(--mono);
+}
+
+.cert-id { display: flex; flex-direction: column; gap: 4px; }

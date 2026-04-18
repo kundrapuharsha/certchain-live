@@ -1,0 +1,80 @@
+.home { display: flex; flex-direction: column; gap: 80px; padding-bottom: 80px; }
+
+.hero {
+  text-align: center;
+  padding: 80px 24px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center; gap: 24px;
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 6px 14px;
+  background: rgba(79,142,247,0.1); color: var(--accent);
+  border: 1px solid rgba(79,142,247,0.3); border-radius: 20px;
+  font-family: var(--mono);
+}
+
+.hero-title { font-size: clamp(36px, 6vw, 64px); line-height: 1.1; }
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent), var(--green));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub { font-size: 18px; color: var(--muted2); max-width: 540px; line-height: 1.7; }
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+/* Features */
+.features { }
+.section-label {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 24px;
+}
+
+.feat-card { display: flex; flex-direction: column; gap: 12px; }
+.feat-icon { color: var(--accent); }
+.feat-title { font-size: 16px; font-weight: 700; }
+.feat-desc { font-size: 14px; color: var(--muted2); line-height: 1.65; }
+
+/* How it works */
+.how { }
+.how-steps {
+  display: flex; gap: 0; align-items: flex-start;
+  flex-wrap: wrap; position: relative;
+}
+
+.how-step {
+  flex: 1; min-width: 220px;
+  background: var(--card); border: 1px solid var(--border2);
+  border-radius: var(--radius); padding: 24px;
+  position: relative;
+  display: flex; flex-direction: column; gap: 12px;
+}
+
+.how-num {
+  font-family: var(--mono); font-size: 36px; font-weight: 700;
+  color: rgba(79,142,247,0.2); line-height: 1;
+}
+
+.how-title { font-size: 15px; font-weight: 700; }
+.how-body  { font-size: 13px; color: var(--muted2); line-height: 1.65; }
+
+.how-arrow {
+  font-size: 24px; color: var(--border2);
+  padding: 0 8px; align-self: center;
+  flex-shrink: 0;
+}
+
+/* CTA */
+.cta-card {
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  padding: 48px;
+}
+.cta-card h2 { font-size: 28px; }
+.cta-card p  { color: var(--muted2); font-size: 16px; }
