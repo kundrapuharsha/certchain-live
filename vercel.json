@@ -1,18 +1,18 @@
 {
   "version": 2,
   "builds": [
-    { "src": "frontend/package.json", "use": "@vercel/static-build",
-      "config": { "distDir": "build" } },
-    { "src": "api/*.js", "use": "@vercel/node" }
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    },
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/(.*)",     "dest": "/frontend/$1" }
-  ],
-  "env": {
-    "SENDGRID_API_KEY":    "@sendgrid_api_key",
-    "EMAIL_FROM":          "@email_from",
-    "EMAIL_FROM_NAME":     "@email_from_name",
-    "REACT_APP_SITE_URL":  "@react_app_site_url"
-  }
+    { "src": "/(.*)", "dest": "/frontend/$1" }
+  ]
 }
