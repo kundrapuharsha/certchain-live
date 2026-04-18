@@ -37,6 +37,7 @@ export function useCertificate() {
       toast.success(`"${name}" registered!`, { id: tid });
       return true;
     } catch(e) { toast.error(e.reason || e.message, { id: tid }); return false; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   const updateInstitution = useCallback(async (address, name, website, emailDomain) => {
@@ -48,6 +49,7 @@ export function useCertificate() {
       toast.success("Updated", { id: tid });
       return true;
     } catch(e) { toast.error(e.reason || e.message, { id: tid }); return false; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   const revokeInstitution = useCallback(async (address) => {
@@ -59,6 +61,7 @@ export function useCertificate() {
       toast.success("Institution revoked", { id: tid });
       return true;
     } catch(e) { toast.error(e.reason || e.message, { id: tid }); return false; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   const getAllInstitutions = useCallback(async () => {
@@ -73,6 +76,7 @@ export function useCertificate() {
       }));
       return list;
     } catch { return []; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   // ── Issuance ────────────────────────────────────────────────
@@ -95,6 +99,7 @@ export function useCertificate() {
       toast.success("Certificate issued on-chain!", { id: tid });
       return { certId, txHash: receipt.hash };
     } catch(e) { toast.error(e.reason || e.message, { id: tid }); return null; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   // ── Revocation ──────────────────────────────────────────────
@@ -107,6 +112,7 @@ export function useCertificate() {
       toast.success("Certificate revoked", { id: tid });
       return true;
     } catch(e) { toast.error(e.reason || e.message, { id: tid }); return false; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   // ── Reads ───────────────────────────────────────────────────
@@ -116,21 +122,25 @@ export function useCertificate() {
       const [valid, cert] = await contract.verifyCertificate(certId);
       return { valid, cert: parseCert(cert) };
     } catch(e) { toast.error(e.reason || e.message); return null; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   const getCertificate = useCallback(async (certId) => {
     require_contract();
     try { return parseCert(await contract.getCertificate(certId)); } catch { return null; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   const getStudentCertificates = useCallback(async (studentId) => {
     require_contract();
     try { return await contract.getStudentCertificates(studentId); } catch { return []; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract]);
 
   const getInstitutionCertificates = useCallback(async (address) => {
     require_contract();
     try { return await contract.getInstitutionCertificates(address || account); } catch { return []; }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contract, account]);
 
   return {
