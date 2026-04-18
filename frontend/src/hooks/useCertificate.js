@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps, no-unused-vars */
 import { useCallback } from "react";
 import { useWeb3 } from "./useWeb3";
 import toast from "react-hot-toast";

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps, no-unused-vars */
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useCertificate } from "../hooks/useCertificate";

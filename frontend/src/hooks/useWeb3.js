@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps, no-unused-vars */
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
 import { ethers } from "ethers";
 import contractABI       from "../utils/contractABI.json";

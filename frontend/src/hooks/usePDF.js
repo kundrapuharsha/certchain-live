@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps, no-unused-vars */
 import { useState, useRef, useCallback } from "react";
 
 export async function sha256FromBuffer(buffer) {

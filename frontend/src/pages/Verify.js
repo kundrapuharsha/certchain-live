@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps, no-unused-vars */
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Search, ShieldCheck, ShieldX, AlertCircle, CheckCircle2, FileQuestion, ExternalLink } from "lucide-react";

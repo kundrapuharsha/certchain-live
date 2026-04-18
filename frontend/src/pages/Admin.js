@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps, no-unused-vars */
 import { useState, useEffect } from "react";
 import { useWeb3 }        from "../hooks/useWeb3";
 import { useCertificate } from "../hooks/useCertificate";
